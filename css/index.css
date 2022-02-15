@@ -1,0 +1,45 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;}
+  
+header{
+    background-color: #0a4275;
+}
+.carousel {
+    margin-bottom: 4rem;
+    position: relative;
+    
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.clearfix{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.clearfix img{
+    max-width: 10rem;
+
+}
+.clearfix  #img-lado{
+    max-width: 40rem;
+}
+hr{
+margin-left: 2%;
+margin-right: 2%;
+}
+#testimonios{
+    margin-left: 2rem;
+    margin-right: 2rem;} 
+
+    
+ footer{
+     background-color: #0a4275;
+}
+
+

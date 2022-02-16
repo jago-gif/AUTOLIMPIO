@@ -1,20 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />    
-<link rel="stylesheet" href="css/agenda.css">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/agenda.css">
     <title>Document</title>
 </head>
+
 <body>
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4  border-bottom"></header>
 
+    <section id="vehiculos">
+        <h2 class="text-center">Contrata tu servicio</h2>
+        <div class="row">
+            <div class="col-md-12 col-lg-6 text-center">
+                <img class="vehiculos rounded-pill" src="img/motor.gif" height="240" alt="Lavado de Motor" />
+                <h2>Lavado de Motor</h2>
+                <p>
+                    El lavado completo de motor tiene un valor de </p>
+                <span class="valor text-primary"> $5.000</span>
+
+            </div><!-- END column1 -->
+            <div class="col-md-12 col-lg-6 text-center">
+                <img class="vehiculos rounded-pill" src="img/exterior.gif" height="240" alt="Lavado exterior" />
+                <h2>Lavado exterior </h2>
+                <p>
+                    Buen servicio, pongo 4 estrellas solo porque no van a buscar el vehiculo.
+                </p>
+                <span class="valor text-primary"> $7.000</span>
+            </div><!-- END column2 -->
+        </div>
+    </section>
+    <hr class="featurette-divider">
+    <section>
+        <div class="d-flex justify-content-center">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-regitrar">
+                Registrate
+            </button>
+        </div>
+    </section>
+    <div class="containeth2 d-flex justify-content-center rounded-pill">
+        <h2>Solo usuarios Registrados</h2>
+    </div>
+    <section id="vehiculos">
+        <div class="row">
+            <div class="col-md-12 col-lg-3 text-center">
+                <h2>Agregar Vehiculo</h2>
+                 <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-nvehiculo">
+                Nuevo Vehiculo
+            </button>
+
+            </div><!-- END column1 -->
+            <div class="col-md-12 col-lg-9 text-center">
+                <img class="vehiculos rounded-pill" src="img/exterior.gif" height="240" alt="Lavado exterior" />
+                <h2>Lavado exterior </h2>
+                <p>
+                    Buen servicio, pongo 4 estrellas solo porque no van a buscar el vehiculo.
+                </p>
+                <span class="valor text-primary"> $7.000</span>
+            </div><!-- END column2 -->
+        </div>
+    </section>
+    <hr class="featurette-divider">
     <footer></footer>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-regitrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registrar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id='form-registrar'>
+                        <div class="form-line">
+                            <h3 class="text-primary"> Registrate</h3>
+                            <label>Rut</label>
+                            <div class="row">
+                                <div class="col-9">
+                                    <input type="text" id="rut" name="rut" class="col-2 form-control"
+                                        required="required" />
+                                    <div id="feedback-rut" class=""> </div>
+                                </div>
+                                <div class="col-1">
+                                    <p>-</p>
+                                </div>
+                                <div class="col-2">
+                                    <input type="text" class="form-control" id="dv" name="dv" placeholder="k" />
+                                    <div id="feedback-dv" class=""> </div>
+                                </div>
+                            </div>
+                            <label>Nombre</label><input class="form-control" type='text' name='Nombreclient'
+                                id="Nombreclient" />
+                            <div id="feedback-nombre" class=""></div>
+                            <label>Apellido</label><input class="form-control" type='text' name='apellidoclient'
+                                id="apellidoclient" />
+                            <div id="feedback-apellido" class=""> </div>
+
+
+                            <label>Direccion</label><input class="form-control" type='text' name='dreccionclient'
+                                id="direccionclient" />
+                            <div id="feedback-direccion" class=""> </div>
+
+
+                            <label>Comuna</label><select class="form-control" id="comunacar">
+                                <option>Temuco</option>
+                                <option>Traiguén</option>
+                                <option>Cunco</option>
+                                <option>Victoria</option>
+                                <option>Lautaro</option>
+                            </select>
+                            <input class="btn btn-success mt-3 mx-auto" id="btnclient" type='submit'>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 2 -->
+    <div class="modal fade" id="modal-nvehiculo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registrar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id='form-registrar'>
+                        <div class="form-line">
+                            <h3 class="text-primary"> Registrate</h3>
+                            <label>Rut</label>
+                            <div class="row">
+                                <div class="col-9">
+                                    <input type="text" id="rut" name="rut" class="col-2 form-control"
+                                        required="required" />
+                                    <div id="feedback-rut" class=""> </div>
+                                </div>
+                                <div class="col-1">
+                                    <p>-</p>
+                                </div>
+                                <div class="col-2">
+                                    <input type="text" class="form-control" id="dv" name="dv" placeholder="k" />
+                                    <div id="feedback-dv" class=""> </div>
+                                </div>
+                            </div>
+                            <label>Nombre</label><input class="form-control" type='text' name='Nombreclient'
+                                id="Nombreclient" />
+                            <div id="feedback-nombre" class=""></div>
+                            <label>Apellido</label><input class="form-control" type='text' name='apellidoclient'
+                                id="apellidoclient" />
+                            <div id="feedback-apellido" class=""> </div>
+
+
+                            <label>Direccion</label><input class="form-control" type='text' name='dreccionclient'
+                                id="direccionclient" />
+                            <div id="feedback-direccion" class=""> </div>
+
+
+                            <label>Comuna</label><select class="form-control" id="comunacar">
+                                <option>Temuco</option>
+                                <option>Traiguén</option>
+                                <option>Cunco</option>
+                                <option>Victoria</option>
+                                <option>Lautaro</option>
+                            </select>
+                            <input class="btn btn-success mt-3 mx-auto" id="btnclient" type='submit'>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/agenda.js"></script>
+
 </body>
+
 </html>

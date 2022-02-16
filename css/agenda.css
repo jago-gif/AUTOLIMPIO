@@ -13,3 +13,20 @@ header{
 footer{
     background-color: #0a4275;
 }
+#Servicios{
+    margin-left: 2rem;
+    margin-right: 2rem;
+} 
+.valor{
+    font-size: 3rem;
+    }
+hr{
+    margin-left: 2%;
+    margin-right: 2%;
+    }
+    .containeth2{
+        background-color: #0a4275;
+        color: white;
+        padding: 0.5rem;
+        margin: 1rem;
+    }

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css" />
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />    
+<link rel="stylesheet" href="../css/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4  border-bottom">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <img src="../img/autolimpio.gif" alt="logo autolimpio" class="bi me-2" width="90" height="40">
+            <span class="fs-4 text-white">Servicios Autolimpio</span>
+          </a>
+          
+          <ul class="nav nav-pills">
+          <li class="nav-item"><a href="../index.html" class="nav-link text-white">Inicio</a></li>
+          <li class="nav-item"><a href="../agenda.html" class="nav-link text-white">Agenda</a></li>
+          <li class="nav-item"><a href="../login.html" class="nav-link text-white">Administracion</a></li>
+          </ul></header>
+
+
+<section class="">
+    <hr>
+    <h2 class="text-center "> Bienvenido al area de Administracion</h2>
+    <hr>
+    <div class=" text-center ">
+        <p>para crear un nuevo usuario administrador precione sobre nuevo usuaro</p>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Usuario nuevo
+        </button>
+    </div>
+    <hr>
+
+    <section id="servicios">
+        <div class="row">
+            
+            <div class="col-md-11 text-center">
+                <table  class="table table-primary table-info">
+                    <thead>
+                        <tr class="table">
+                            <th scope="col">#</th>
+                            <th scope="col">#venta</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Marca</th>
+                            <th scope="col">Modelo</th>
+                            <th scope="col">año</th>
+                            <th scope="col">RevTec</th>
+                            <th scope="col">Neto</th>
+                            <th scope="col">Iva</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Atiende</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="taba-servicios">
+                    </tbody>
+                </table>
+            </div><!-- END column2 -->
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Registrar Usuario</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id='sign-up'>
+                    <h3 class="text-primary">Crear cuenta de Usuario</h3>
+                    <p>Escriba el correo electronico y la clave del trabajador que desea registrar,
+                        posterior al
+                        registro le llegará un correo electronico al usuario para confirmar la cuenta.
+                    </p>
+                    <label>Correo Electronico</label><input class="form-control" type='email'
+                        name='email' />
+                    <label>Contraseña</label><input class="form-control" type='password' name='password' />
+                    <input class="btn btn-success mt-3 mx-auto" type='submit'>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <footer><footer class="text-white text-center text-lg-start ">
+        <!-- Grid container -->
+        <div class="container p-4">
+          <!--Grid row-->
+          <div class="row mt-4">
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+              <h5 class="text-uppercase mb-4">AutoLimpio</h5>
+                <img src="../img/autolimpio.gif" height="90px" alt="">
+              
+    
+              
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+    
+              <ul class="fa-ul" style="margin-left: 1.65em;">
+                <li class="mb-3">
+                  <span class="fa-li"><i class="fa fa-map"></i></span><span class="ms-2">Caupolican, 123, Temuco</span>
+                </li>
+                <li class="mb-3">
+                    <span class="fa-li"><i class="fa fa-map"></i></span><span class="ms-2">Mackena, 233, Traiguén</span>
+                  </li>
+                <li class="mb-3">
+                  <span class="fa-li"><i class="fa fa-envelope-o"></i></span><span class="ms-2">Temuco@autolimpio.cl</span>
+                </li>
+                <li class="mb-3">
+                    <span class="fa-li"><i class="fa fa-envelope-o"></i></span><span class="ms-2">Traiguen@autolimpio.cl</span>
+                  </li>
+                <li class="mb-3">
+                  <span class="fa-li"><i class="fa fa-phone"></i></span><span class="ms-2">+ 48 234 567 88</span>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase mb-4">Horarios de Atención</h5>
+    
+              <table class="table text-center text-white">
+                <tbody class="fw-normal">
+                  <tr>
+                    <td>Lunes a Viernes:</td>
+                    <td>8am - 9pm</td>
+                  </tr>
+                  <tr>
+                    <td>Sabados:</td>
+                    <td>8am - 1pm</td>
+                  </tr>
+                  <tr>
+                    <td>Festivos:</td>
+                    <td>-Cerrado-</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+    
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2022 Copyright:
+          <a class="text-white" href="https://jago-gif.github.io/AUTOLIMPIO/">AutoLimpio.cl</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+    </footer>
+      <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+      <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+</body>
+</html>

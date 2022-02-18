@@ -38,9 +38,8 @@
     <hr class="featurette-divider">
     <section>
         <div class="d-flex justify-content-center">
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-regitrar">
-                Registrate
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-registro">
+                Crear Nuevo Usuario
             </button>
         </div>
     </section>
@@ -51,74 +50,208 @@
         <div class="row">
             <div class="col-md-12 col-lg-3 text-center">
                 <h2>Agregar Vehiculo</h2>
-                 <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-nvehiculo">
-                Nuevo Vehiculo
-            </button>
-
+                <!-- boton modal vehiculos -->
+                <br>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-auto">
+                    Agregar vehiculo
+                </button>
+                
             </div><!-- END column1 -->
-            <div class="col-md-12 col-lg-9 text-center">
-                <img class="vehiculos rounded-pill" src="img/exterior.gif" height="240" alt="Lavado exterior" />
-                <h2>Lavado exterior </h2>
-                <p>
-                    Buen servicio, pongo 4 estrellas solo porque no van a buscar el vehiculo.
-                </p>
-                <span class="valor text-primary"> $7.000</span>
+            <div class="col-md-12 col-lg-2 text-center">
+                <h2> Ver mis vehiculos</h2>
+                <label>Debe ingresa tu rut sin puntos, guion y numero verificador</label><input class="form-control" type='text' name='rutsearch'
+                id="rutsearch" />
+            </div>
+            <div class="col-md-12 col-lg-6 text-center">
+                <table  class="table table-primary table-info">
+                    <thead>
+                        <tr class="table">
+                            <th scope="col">#</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Marca</th>
+                            <th scope="col">Modelo</th>
+                            <th scope="col">Año</th>
+                            <th scope="col">Revision Tecnica</th>
+                            <th scope="col">Seleccionar</th>
+                            <th scope="col">Borrar</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody id="taba-autos">
+                    </tbody>
+                </table>
             </div><!-- END column2 -->
         </div>
     </section>
+
     <hr class="featurette-divider">
-    <footer></footer>
+    <div class="containeth2 d-flex justify-content-center rounded-pill">
+        <h2>Contrata nuestros servicios</h2>
+        </div>
+        <section>
+            
+        <div id="ventata" class="ventata">
+            <form id='form-venta'>
+                <div class="form-line">
+                    <div class="">
+                    <label for="id">id</label><input type="text" id="recibID" name="recibid" class="col-8 form-control" required="required" />
+                    <label for="tipo">Tipo</label><input type="text" id="recibtipo" name="recibtipo" class="col-8 form-control" required="required" />
+                    <label for="marca">Marca</label><input type="text" id="recibmarca" name="recibmarca" class="col-8 form-control" required="required" />
+                    <label for="modelo">Modelo</label><input type="text" id="recibmodelo" name="recibmodelo" class="col-8 form-control" required="required" />
+                    <label for="año">año</label><input type="text" id="recibaño" name="recibaño" class="col-8 form-control" required="required" />
+                    <label for="Revision tecnica al dia">Revision tecnica al día</label><input type="text" id="recibrevaldia" name="recibrevaldia" class="col-6 form-control" required="required" />
+                    <label for="fecha">fecha</label><input type="date" id="fecha" name="fecha" class="col-8 form-control" required="required" />
+                    <label>Tipo de Vehiculo</label><select class="form-control" id="hora">
+                        <option value="0" selected>Seleccione...
+                        <option value="08:00">08:00</option>
+                        <option value="09:00">09:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="17:00">17:00</option>
+                        <option value="18:00">18:00</option>
+                        <option value="19:00">19:00</option>
+                        <option value="20:00">20:00</option>
+                        <option value="21:00">21:00</option>
+                    </select>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="7000" id="lavadoExterior">
+                        <label class="form-check-label" for="lavadoExterior">
+                          Lavado Exterior $7.000.-
+                        </label>
+                      </div>
+            
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="5000" id="lavadoMotor">
+                        <label class="form-check-label" for="lavadoMotor">
+                            Lavado Motor $5.000.-
+                        </label>
+                      </div>
+                      <div><button id="btnCalcular" type="button" class="btn btn-primary">Calcular</button>
+                      </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-1">Neto</div>
+        <div id="neto" class="col-2">$</div>
+        <div class="col-1">IVA</div>
+        <div id="iva" class="col-2">$</div>
+        <div class="col-1">TOTAL</div>
+        <div id="total" class="col-2">$</div>
+    </div>
+
+                   
+                    <input class="btn btn-success mt-3 mx-auto" id="btnventa" type='submit'>
+            </form>
+        </div>
+    </section>
+    <hr class="featurette-divider">
+    
+
+ <!-- Modal -->
+ <footer></footer>
+
+ <div class="container">
+ <div class="modal fade" id="modal-registro" tabindex="-1" aria-labelledby="modal-auto" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Se cliente de AutoLimpio</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id='form-registrar'>
+                    <div class="form-line">
+                        <h3 class="text-primary"> Registrate</h3>
+                        <label>Rut</label>
+                        <div class="row">
+                            <div class="col-9">
+                                <input type="text" id="rut" name="rut" class="col-2 form-control"
+                                    required="required" />
+                                <div id="feedback-rut" class=""> </div>
+                            </div>
+                            <div class="col-1">
+                                <p>-</p>
+                            </div>
+                            <div class="col-2">
+                                <input type="text" class="form-control" id="dv" name="dv" placeholder="k" />
+                                <div id="feedback-dv" class=""> </div>
+                            </div>
+                        </div>
+                        <label>Nombre</label><input class="form-control" type='text' name='Nombreclient'
+                            id="Nombreclient" />
+                        <div id="feedback-nombre" class=""></div>
+                        <label>Apellido</label><input class="form-control" type='text' name='apellidoclient'
+                            id="apellidoclient" />
+                        <div id="feedback-apellido" class=""> </div>
 
 
-    <!-- Modal -->
-    <div class="modal fade" id="modal-regitrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <label>Direccion</label><input class="form-control" type='text' name='dreccionclient'
+                            id="direccionclient" />
+                        <div id="feedback-direccion" class=""> </div>
+
+
+                        <label>Comuna</label><select class="form-control" id="comunacar">
+                            <option>Temuco</option>
+                            <option>Traiguén</option>
+                            <option>Cunco</option>
+                            <option>Victoria</option>
+                            <option>Lautaro</option>
+                        </select>
+                        <input class="btn btn-success mt-3 mx-auto" id="btnclient" type='submit'>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container">
+
+    <div class="modal fade" id="modal-auto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Registrar</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Agrega tus vehiculos</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id='form-registrar'>
+                    <form id='form-auto'>
                         <div class="form-line">
-                            <h3 class="text-primary"> Registrate</h3>
-                            <label>Rut</label>
-                            <div class="row">
-                                <div class="col-9">
-                                    <input type="text" id="rut" name="rut" class="col-2 form-control"
-                                        required="required" />
-                                    <div id="feedback-rut" class=""> </div>
-                                </div>
-                                <div class="col-1">
-                                    <p>-</p>
-                                </div>
-                                <div class="col-2">
-                                    <input type="text" class="form-control" id="dv" name="dv" placeholder="k" />
-                                    <div id="feedback-dv" class=""> </div>
-                                </div>
-                            </div>
-                            <label>Nombre</label><input class="form-control" type='text' name='Nombreclient'
-                                id="Nombreclient" />
-                            <div id="feedback-nombre" class=""></div>
-                            <label>Apellido</label><input class="form-control" type='text' name='apellidoclient'
-                                id="apellidoclient" />
-                            <div id="feedback-apellido" class=""> </div>
-
-
-                            <label>Direccion</label><input class="form-control" type='text' name='dreccionclient'
-                                id="direccionclient" />
-                            <div id="feedback-direccion" class=""> </div>
-
-
-                            <label>Comuna</label><select class="form-control" id="comunacar">
-                                <option>Temuco</option>
-                                <option>Traiguén</option>
-                                <option>Cunco</option>
-                                <option>Victoria</option>
-                                <option>Lautaro</option>
+                            <h3 class="text-primary"> Agregar mi primer Vehiculo</h3>
+                            <label>Rut <span>(sin puntos, guion y numero verificador)</span> </label> 
+                            <input type="text" id="rutsdv" name="rutsdv" class="col-2 form-control" required="required" />
+                            <div id="feedback-rutsdv" class=""> </div>
+                            <label>Tipo de Vehiculo</label><select class="form-control" id="optiontipo">
+                                <option value="0" selected>Seleccione...
+                                <option value="Automóvil">Automóvil</option>
+                                <option value="Furgón">Furgón</option>
+                                <option value="Camión">Camión</option>
+                                <option value="Camioneta">Camioneta </option>
+                                <option value="Moto">Moto</option>
                             </select>
-                            <input class="btn btn-success mt-3 mx-auto" id="btnclient" type='submit'>
+
+                            <label>Marca</label><select class="form-control" id="optionmarca"></select>
+                            <label>Modelo</label><select class="form-control" id="optionmodelo"></select>
+                            <label>Año </label> 
+                            <input type="text" id="año" name="año" class="col-2 form-control" required="required" />
+                            <div class="form-check">
+                                <label>¿Tiene la revision tecnica al día?</label> <br>
+                                <input class="form-check-input" type="radio" name="revaldia" id="revaldia" value="si">
+                                <label class="form-check-label" for="revaldia1">Si</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="revaldia" id="revaldia" value="no"
+                                    checked>
+                                <label class="form-check-label" for="revaldia2">No</label>
+                            </div>
+                            <input class="btn btn-success mt-3 mx-auto" id="btnauto" type='submit'>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -127,62 +260,16 @@
             </div>
         </div>
     </div>
-    <!-- Modal 2 -->
-    <div class="modal fade" id="modal-nvehiculo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Registrar</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id='form-registrar'>
-                        <div class="form-line">
-                            <h3 class="text-primary"> Registrate</h3>
-                            <label>Rut</label>
-                            <div class="row">
-                                <div class="col-9">
-                                    <input type="text" id="rut" name="rut" class="col-2 form-control"
-                                        required="required" />
-                                    <div id="feedback-rut" class=""> </div>
-                                </div>
-                                <div class="col-1">
-                                    <p>-</p>
-                                </div>
-                                <div class="col-2">
-                                    <input type="text" class="form-control" id="dv" name="dv" placeholder="k" />
-                                    <div id="feedback-dv" class=""> </div>
-                                </div>
-                            </div>
-                            <label>Nombre</label><input class="form-control" type='text' name='Nombreclient'
-                                id="Nombreclient" />
-                            <div id="feedback-nombre" class=""></div>
-                            <label>Apellido</label><input class="form-control" type='text' name='apellidoclient'
-                                id="apellidoclient" />
-                            <div id="feedback-apellido" class=""> </div>
+</div>
 
 
-                            <label>Direccion</label><input class="form-control" type='text' name='dreccionclient'
-                                id="direccionclient" />
-                            <div id="feedback-direccion" class=""> </div>
+
+   
+    
+    
+      
 
 
-                            <label>Comuna</label><select class="form-control" id="comunacar">
-                                <option>Temuco</option>
-                                <option>Traiguén</option>
-                                <option>Cunco</option>
-                                <option>Victoria</option>
-                                <option>Lautaro</option>
-                            </select>
-                            <input class="btn btn-success mt-3 mx-auto" id="btnclient" type='submit'>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="js/script.js"></script>

@@ -1,8 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-*{  margin: 0;
-    padding: 0;
+*{  margin: 0%;
+    padding: 0%;
     box-sizing: border-box;
+    overflow-x: hidden;
+
 }
 body{
     font-family: 'Roboto', sans-serif;}
@@ -13,6 +15,7 @@ header{
 footer{
     background-color: #0a4275;
 }
+
 #Servicios{
     margin-left: 2rem;
     margin-right: 2rem;
@@ -27,6 +30,7 @@ hr{
     .containeth2{
         background-color: #0a4275;
         color: white;
-        padding: 0.5rem;
+        padding: 1rem;
         margin: 1rem;
     }
+
